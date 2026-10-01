@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <!--
+    Replaced by the value of `--base-href` when building, e.g. for GitHub Pages:
+    flutter build web --release --base-href /boba-lab/
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Boba Lab — a bubble tea ordering app mockup built with Flutter.">
+  <meta name="theme-color" content="#7C3AED">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Boba Lab">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Boba Lab</title>
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    html, body { margin: 0; height: 100%; background: #F4F1FA; }
+    /* Shown while Flutter downloads; removed after its first frame. */
+    #boba-loading {
+      position: fixed; inset: 0; display: grid; place-items: center;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #5B21B6;
+      transition: opacity 0.3s ease;
+    }
+    #boba-loading .mark { text-align: center; }
+    #boba-loading svg { width: 76px; height: 84px; animation: boba-bob 1.2s ease-in-out infinite alternate; }
+    #boba-loading p { margin: 14px 0 0; font-size: 18px; font-weight: 600; }
+    @keyframes boba-bob { from { transform: translateY(0); } to { transform: translateY(-8px); } }
+    @media (prefers-reduced-motion: reduce) { #boba-loading svg { animation: none; } }
+  </style>
+</head>
+<body>
+  <div id="boba-loading" role="status" aria-label="Loading Boba Lab">
+    <div class="mark">
+      <svg viewBox="0 0 180 200" aria-hidden="true">
+        <defs><clipPath id="inside"><path d="M35 36.5H145L133.8 183Q133.3 189.5 127 189.5H53Q46.7 189.5 46.2 183Z"/></clipPath></defs>
+        <g clip-path="url(#inside)">
+          <rect x="0" y="54" width="180" height="150" fill="#C99A6E"/>
+          <g fill="#2A1A12">
+            <circle cx="70" cy="184" r="6.3"/><circle cx="83" cy="184.5" r="6.3"/><circle cx="96" cy="184.5" r="6.3"/>
+            <circle cx="109" cy="184" r="6.3"/><circle cx="76.5" cy="172.5" r="6.3"/><circle cx="89.5" cy="173" r="6.3"/>
+            <circle cx="102.5" cy="172.5" r="6.3"/>
+          </g>
+        </g>
+        <path d="M32 34H148L136.5 184Q136 192 128 192H52Q44 192 43.5 184Z" fill="rgba(255,255,255,0.3)" stroke="rgba(124,58,237,0.35)" stroke-width="2"/>
+        <rect x="28.5" y="28.5" width="123" height="7" rx="3.5" fill="#C4B5FD"/>
+        <line x1="112" y1="4" x2="96" y2="150" stroke="#F9A8D4" stroke-width="11" stroke-linecap="round"/>
+      </svg>
+      <p>Boba Lab</p>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('flutter-first-frame', function () {
+      var loading = document.getElementById('boba-loading');
+      if (!loading) return;
+      loading.style.opacity = '0';
+      setTimeout(function () { loading.remove(); }, 320);
+    });
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

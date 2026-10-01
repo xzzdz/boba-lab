@@ -1,0 +1,8 @@
+# Opt-in suites (slow or write files):
+#   flutter test --tags screenshots --run-skipped   # renders docs/screenshots
+#   flutter test --tags icons --run-skipped         # renders web/icons + favicon
+tags:
+  screenshots:
+    skip: "Run with: flutter test --tags screenshots --run-skipped"
+  icons:
+    skip: "Run with: flutter test --tags icons --run-skipped"

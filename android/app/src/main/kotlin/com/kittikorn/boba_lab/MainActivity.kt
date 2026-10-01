@@ -1,0 +1,5 @@
+package com.kittikorn.boba_lab
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity : FlutterActivity()

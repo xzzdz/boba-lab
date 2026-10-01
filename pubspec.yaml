@@ -1,0 +1,48 @@
+name: boba_lab
+description: "Boba Lab — a bubble tea ordering app mockup built with Flutter."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.4
+
+dependencies:
+  cupertino_icons: ^2.0.0
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  go_router: ^18.0.2
+  intl: any
+  lottie: ^3.6.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  generate: true
+
+  assets:
+    - assets/lottie/
+
+  # Thai + Latin fonts for design direction A "Soft Clay" (both SIL OFL 1.1).
+  # Anuphan ships as a variable font; these are static instances made with
+  # fontTools so Flutter picks the right weight on every platform.
+  fonts:
+    - family: Mitr
+      fonts:
+        - asset: assets/fonts/Mitr-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Mitr-SemiBold.ttf
+          weight: 600
+    - family: Anuphan
+      fonts:
+        - asset: assets/fonts/Anuphan-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Anuphan-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Anuphan-SemiBold.ttf
+          weight: 600
